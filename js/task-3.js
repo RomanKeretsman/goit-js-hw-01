@@ -10,12 +10,10 @@ const ADMIN_PASSWORD = 'qwerty-0';
 
 if (message === null) {
   message = 'Отменено пользователем!';
-  console.log('Отменено пользователем!');
 } else if (message === ADMIN_PASSWORD) {
   message = 'Добро пожаловать!';
-  console.log('Добро пожаловать!');
 } else {
   message = 'Доступ запрещен, неверный пароль!';
-  console.log('Доступ запрещен, неверный пароль!');
 }
+
 alert(message);

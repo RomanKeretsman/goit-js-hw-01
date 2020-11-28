@@ -13,34 +13,45 @@
 // Ямайка - 120 кредитов
 
 let price;
+let country;
 const deliveryCountry = prompt(
   'Введите название страны куда хотите оформить доставку',
 );
+const china = 'китай';
+const chile = 'чили';
+const australia = 'австралия';
+const india = 'индия';
+const jamaica = 'ямайка';
 
 switch (deliveryCountry.toLowerCase()) {
-  case 'китай':
+  case china:
     price = 100;
+    country = 'Китай';
     break;
 
-  case 'чили':
+  case chile:
     price = 250;
+    country = 'Чили';
     break;
 
-  case 'австралия':
+  case australia:
     price = 170;
+    country = 'Австралия';
     break;
 
-  case 'индия':
+  case india:
     price = 80;
+    country = 'Индия';
     break;
 
-  case 'ямайка':
+  case jamaica:
     price = 120;
+    country = 'Ямайка';
     break;
 
   default:
-    price = null;
+    alert('В вашей стране доставка не доступна');
 }
-if (price !== null) {
-  alert(`Доставка в ${deliveryCountry} будет стоить ${price} кредитов`);
-} else alert('В вашей стране доставка не доступна');
+if (price !== undefined) {
+  alert(`Доставка в ${country} будет стоить ${price} кредитов`);
+}

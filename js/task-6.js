@@ -8,21 +8,15 @@
 let input;
 let total = 0;
 
-while (true) {
-  let input = prompt('Введи число');
+do {
+  input = prompt('Введи число');
 
-  if (input === null) {
-    break;
-  }
-
-  input = Number(input);
-  const notANumber = Number.isNaN(input);
-  if (notANumber) {
+  if (isNaN(input)) {
     alert('Было введено не число, попробуйте еще раз');
     continue;
+  } else {
+    total += Number(input);
   }
-
-  total += input;
-}
+} while (input !== null);
 
 alert(`Общая сумма чисел равна ${total}`);
